@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 from django.http import HttpResponse
 from django.contrib.auth import logout
+from django.shortcuts import render
 
 def login_view(request):
     if request.user.is_authenticated:
@@ -31,3 +32,12 @@ def home(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+def home(request):
+    return render(request, 'clientes/home.html')
+
+def cadastro_view(request):
+    return HttpResponse("Página de Cadastro")
+
+def pesquisa_view(request):
+    return HttpResponse("Página de Pesquisa")
