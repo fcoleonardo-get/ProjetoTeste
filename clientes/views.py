@@ -37,7 +37,8 @@ def home(request):
     return render(request, 'clientes/home.html')
 
 def cadastro_view(request):
-    return HttpResponse("Página de Cadastro")
+    return render(request, 'clientes/cadastro.html')
 
 def pesquisa_view(request):
-    return HttpResponse("Página de Pesquisa")
+    return render(request, 'clientes/pesquisa.html')
+
