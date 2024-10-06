@@ -33,12 +33,15 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 
+# View para renderizar a página inicial
 def home(request):
     return render(request, 'clientes/home.html')
 
+# View para renderizar a página de cadastro
 def cadastro_view(request):
     return render(request, 'clientes/cadastro.html')
 
+# View para renderizar a página de pesquisa
 def pesquisa_view(request):
     return render(request, 'clientes/pesquisa.html')
 
